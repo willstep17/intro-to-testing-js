@@ -26,6 +26,12 @@ function isEven(input) {
     }
 }
 
-function isVowel() {
-    return true;
+function isVowel(input) {
+    if(input.length > 1) {
+        var vowelList = 'aeiouAEIOU';
+        vowelList.charAt(input) !== -1;
+    } else {
+        return /[aeiouAEIOU]/.test(input);
+    }
+
 }
