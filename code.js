@@ -3,7 +3,7 @@
 //     return "Hello, World!";
 // }
 
-var helloWorld = function() {
+function helloWorld() {
     return "Hello, World!";
 }
 
@@ -19,19 +19,13 @@ function isFive(input) {
 }
 
 function isEven(input) {
-    if(typeof input === 'boolean') {
-        return false;
-    } else {
-        return (input % 2 === 0);
-    }
+    return typeof input !== 'boolean' && input % 2 === 0;
 }
 
 function isVowel(input) {
-    if(input.length > 1) {
+    if(typeof input === 'string' && input.length === 1) {
         var vowelList = 'aeiouAEIOU';
-        vowelList.charAt(input) !== -1;
-    } else {
-        return /[aeiouAEIOU]/.test(input);
+        return (vowelList.indexOf(input) !== -1);
     }
-
+    return false;
 }
