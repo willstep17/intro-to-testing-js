@@ -11,8 +11,41 @@ describe('name for test', function() {
 });
 
 describe('sayHello', function() {
-    it('Should be a defined function', function() {
-        expect(typeof sayHello).toBe('function');
+    it("Should be a defined function", function() {
+        expect(typeof sayHello).toBe("function");
+    });
+    it("Should return a string when called", function() {
+        expect(typeof sayHello()).toBe("string");
+    });
+    it("Should return 'Hello World' when not passed any arguments", function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed null", function() {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed an empty string", function() {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed 2.3", function() {
+        expect(sayHello(2.3)).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed '5'", function() {
+        expect(sayHello('5')).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed true boolean", function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed false boolean", function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it("Should return 'Hello, Jane!' when passed 'Jane'", function() {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    });
+    it("Should return 'Hello, Alex!' when passed 'Alex'", function() {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    });
+    it("Should return 'Hello, Pat!' when passed 'Pat'", function() {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
 });
 
