@@ -13,3 +13,7 @@ function sayHello(input) {
     return (typeof input === 'string' && input.length > 0 && isNaN(input)) ?
         "Hello, " + input + "!" : "Hello, World!";
 }
+
+function isFive(input) {
+    return (parseFloat(input) === 5);
+}
