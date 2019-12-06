@@ -17,3 +17,15 @@ function sayHello(input) {
 function isFive(input) {
     return (parseFloat(input) === 5);
 }
+
+function isEven(input) {
+    if(typeof input === 'boolean') {
+        return false;
+    } else {
+        return (input % 2 === 0);
+    }
+}
+
+function isVowel() {
+    return true;
+}
