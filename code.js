@@ -29,3 +29,10 @@ function isVowel(input) {
     }
     return false;
 }
+
+function add(a, b) {
+    if(typeof Number(a) === 'number' && typeof Number(b) === 'number') {
+        return a + b;
+    }
+    return NaN;
+}

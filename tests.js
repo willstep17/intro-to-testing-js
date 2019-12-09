@@ -149,3 +149,24 @@ describe('isVowel', function() {
         expect(isVowel("banana")).toBe(false);
     });
 });
+
+describe('add', function() {
+    it('Should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('Should return 5 when passed (2, 3)', function () {
+        expect(add(2, 3)).toBe(5);
+    });
+    it('Should return -12 when passed (-3, -9)', function () {
+        expect(add(-3, -9)).toBe(-12);
+    });
+    it('Should return 11 when passed ("5", 6)', function () {
+        expect(add("5", 6)).toBe(11);
+    });
+    it('Should return 6 when passed ("-4", "10")', function () {
+        expect(add(-4, 10)).toBe(6);
+    });
+    it('Should return NaN when passed ("banana", "split")', function () {
+        expect(add("banana", "split")).toBe(NaN);
+    });
+});
