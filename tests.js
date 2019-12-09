@@ -167,6 +167,12 @@ describe('add', function() {
         expect(add(-4, 10)).toBe(6);
     });
     it('Should return NaN when passed ("banana", "split")', function () {
-        expect(add("banana", "split")).toBe(NaN);
+        expect(add("banana", "split")).toBeNaN();
+    });
+    it('Should return NaN when passed (2, "apples")', function () {
+        expect(add(2, "apples")).toBeNaN();
+    });
+    it('Should return NaN when passed ()', function () {
+        expect(add()).toBeNaN();
     });
 });
